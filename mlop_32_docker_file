@@ -1,0 +1,21 @@
+# Используем базовый образ continuumio/miniconda3:latest
+FROM continuumio/miniconda3:latest
+
+# Устанавливаем рабочую директорию
+WORKDIR /app
+
+# Создаем файл 1.sh локально и копируем в контейнер
+RUN echo '#!/bin/bash' > /app/1.sh && \
+    echo 'echo "Hello Netology"' >> /app/1.sh
+
+# Даем права на исполнение
+RUN chmod +x /app/1.sh
+
+# Устанавливаем пакеты Python
+RUN conda install -y -c conda-forge \
+    mlflow \
+    boto3 \
+    pymysql
+
+# Запускаем файл при старте контейнера
+CMD ["/app/1.sh"]

@@ -1,0 +1,2895 @@
+[internal] load build definition from mlop_32_docker_file
+	transferring 724/0 0.016
+[internal] load metadata for docker.io/continuumio/miniconda3:latest
+[internal] load .dockerignore
+	transferring 2/0 0.009
+[1/5] FROM docker.io/continuumio/miniconda3:latest@sha256:5df7c31c16e90e4ea370836770feed507a1cf51c6e8aad835c65fb26b9eca941
+	resolve docker.io/continuumio/miniconda3:latest@sha256:5df7c31c16e90e4ea370836770feed507a1cf51c6e8aad835c65fb26b9eca941 0/0 0.049
+	done 1607/1607 -0.958
+	done 869/869 -0.697
+	done 4916/4916 -0.158
+	done 29773685/29773685 11.99
+	done 64921512/64921512 26.145
+	done 168008810/168008810 47.158
+	extract 0/0 9.382
+	extract 0/0 19.32
+	extract 0/0 23.521
+[2/5] WORKDIR /app
+[3/5] RUN echo '#!/bin/bash' > /app/1.sh &&     echo 'echo "Hello Netology"' >> /app/1.sh
+[4/5] RUN chmod +x /app/1.sh
+[5/5] RUN conda install -y -c conda-forge     mlflow     boto3     pymysql
+	Retrieving notices:-\|/-\|/-\|/-\|/-\|/done
+	Channels:
+	- conda-forge
+	- defaults
+	Platform: linux-64
+	Collecting package metadata (repodata.json):\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|done
+	Solving environment:-\|/-\|/-\|/-\done
+	
+	## Package Plan ##
+	
+	environment location: /opt/conda
+	
+	added / updated specs:
+	- boto3
+	- mlflow
+	- pymysql
+	
+	
+	The following packages will be downloaded:
+	
+	package                    |            build
+	---------------------------|-----------------
+	aiohappyeyeballs-2.6.1     |     pyhd8ed1ab_0          19 KB  conda-forge
+	aiohttp-3.13.3             |  py313hd6074c6_0        1005 KB  conda-forge
+	aiosignal-1.4.0            |     pyhd8ed1ab_0          13 KB  conda-forge
+	alembic-1.18.1             |     pyhcf101f3_0         179 KB  conda-forge
+	annotated-doc-0.0.4        |     pyhcf101f3_0          14 KB  conda-forge
+	anyio-4.12.1               |     pyhcf101f3_0         142 KB  conda-forge
+	arrow-cpp-21.0.0           |       hac1acdb_1        12.3 MB
+	attrs-25.4.0               |     pyhcf101f3_1          63 KB  conda-forge
+	aws-c-auth-0.9.0           |       hb25bd0a_2         119 KB
+	aws-c-cal-0.9.2            |       he7b75e1_1          50 KB  conda-forge
+	aws-c-common-0.12.4        |       hb03c661_0         231 KB  conda-forge
+	aws-c-compression-0.3.1    |       h92c474e_6          22 KB  conda-forge
+	aws-c-event-stream-0.5.6   |       h4d13e43_1          57 KB  conda-forge
+	aws-c-http-0.10.4          |       hbd4fbc6_1         219 KB  conda-forge
+	aws-c-io-0.21.4            |       h88603f0_1         176 KB  conda-forge
+	aws-c-mqtt-0.13.3          |       h680d5b3_4         211 KB  conda-forge
+	aws-c-s3-0.8.7             |       h3ff94e8_0         133 KB
+	aws-c-sdkutils-0.2.4       |       h92c474e_1          58 KB  conda-forge
+	aws-checksums-0.2.7        |       h92c474e_2          75 KB  conda-forge
+	aws-crt-cpp-0.34.0         |       h7934f7d_0         383 KB
+	aws-sdk-cpp-1.11.638       |       hac3f51a_0         3.3 MB
+	bcrypt-5.0.0               |  py313h843e2db_1         286 KB  conda-forge
+	blinker-1.9.0              |     pyhff2d567_0          14 KB  conda-forge
+	boto3-1.42.36              |     pyhd8ed1ab_0          83 KB  conda-forge
+	botocore-1.42.36           |     pyhd8ed1ab_0         8.0 MB  conda-forge
+	brotli-1.0.9               |       h166bdaf_9          20 KB  conda-forge
+	brotli-bin-1.0.9           |       h166bdaf_9          20 KB  conda-forge
+	ca-certificates-2026.1.4   |       hbd8a1cb_0         143 KB  conda-forge
+	cachetools-6.2.5           |     pyhd8ed1ab_0          17 KB  conda-forge
+	certifi-2026.1.4           |     pyhd8ed1ab_0         147 KB  conda-forge
+	cloudpickle-3.1.2          |     pyhcf101f3_1          27 KB  conda-forge
+	contourpy-1.3.3            |  py313hc8edb43_4         314 KB  conda-forge
+	cycler-0.12.1              |     pyhcf101f3_2          14 KB  conda-forge
+	databricks-sdk-0.73.0      |     pyhd8ed1ab_0         465 KB  conda-forge
+	deprecated-1.3.1           |     pyhd8ed1ab_1          16 KB  conda-forge
+	dnspython-2.8.0            |     pyhcf101f3_0         192 KB  conda-forge
+	docker-py-7.1.0            |     pyhd8ed1ab_1         102 KB  conda-forge
+	email-validator-2.3.0      |     pyhd8ed1ab_0          46 KB  conda-forge
+	email_validator-2.3.0      |       hd8ed1ab_0           7 KB  conda-forge
+	exceptiongroup-1.3.1       |     pyhd8ed1ab_0          21 KB  conda-forge
+	fastapi-0.128.0            |       h0ea4129_1           5 KB  conda-forge
+	fastapi-cli-0.0.20         |     pyhcf101f3_0          19 KB  conda-forge
+	fastapi-core-0.128.0       |     pyhcf101f3_1          83 KB  conda-forge
+	flask-3.1.2                |     pyhd8ed1ab_0          81 KB  conda-forge
+	flask-cors-6.0.2           |     pyhcf101f3_0          19 KB  conda-forge
+	fonttools-4.61.1           |  py313h3dea7bd_0         2.9 MB  conda-forge
+	freetype-2.14.1            |       ha770c72_0         169 KB  conda-forge
+	frozenlist-1.7.0           |  py313h6b9daa2_0          53 KB  conda-forge
+	gflags-2.2.2               |    h5888daf_1005         117 KB  conda-forge
+	gitdb-4.0.12               |     pyhd8ed1ab_0          52 KB  conda-forge
+	gitpython-3.1.46           |     pyhd8ed1ab_0         155 KB  conda-forge
+	glog-0.5.0                 |       h48cff8f_0         104 KB  conda-forge
+	google-auth-2.48.0         |     pyhcf101f3_0         139 KB  conda-forge
+	graphene-3.4.3             |     pyhd8ed1ab_1          47 KB  conda-forge
+	graphql-core-3.2.7         |     pyhcf101f3_0         382 KB  conda-forge
+	graphql-relay-3.2.0        |     pyhd8ed1ab_1          31 KB  conda-forge
+	greenlet-3.3.1             |  py313h7033f15_0         234 KB  conda-forge
+	gunicorn-23.0.0            |  py313h78bf25f_3         181 KB  conda-forge
+	h11-0.16.0                 |     pyhcf101f3_1          38 KB  conda-forge
+	h2-4.3.0                   |     pyhcf101f3_0          94 KB  conda-forge
+	hpack-4.1.0                |     pyhd8ed1ab_0          30 KB  conda-forge
+	httpcore-1.0.9             |     pyh29332c3_0          48 KB  conda-forge
+	httptools-0.7.1            |  py313h07c4f96_1          96 KB  conda-forge
+	httpx-0.28.1               |     pyhd8ed1ab_0          62 KB  conda-forge
+	huey-2.6.0                 |     pyhcf101f3_0          67 KB  conda-forge
+	hyperframe-6.1.0           |     pyhd8ed1ab_0          17 KB  conda-forge
+	importlib-metadata-8.7.0   |     pyhe01879c_1          34 KB  conda-forge
+	invoke-2.2.1               |     pyhd8ed1ab_0         130 KB  conda-forge
+	itsdangerous-2.2.0         |     pyhd8ed1ab_1          19 KB  conda-forge
+	jinja2-3.1.6               |     pyhcf101f3_1         118 KB  conda-forge
+	jmespath-1.1.0             |     pyhcf101f3_1          25 KB  conda-forge
+	joblib-1.5.3               |     pyhd8ed1ab_0         221 KB  conda-forge
+	kiwisolver-1.4.9           |  py313hc8edb43_2          76 KB  conda-forge
+	lcms2-2.17                 |       h717163a_0         242 KB  conda-forge
+	lerc-4.0.0                 |       h0aef613_1         258 KB  conda-forge
+	libabseil-20250127.0       | cxx17_hbbce691_0         1.3 MB  conda-forge
+	libblas-3.11.0             |5_h4a7cf45_openblas          18 KB  conda-forge
+	libbrotlicommon-1.0.9      |       h166bdaf_9          69 KB  conda-forge
+	libbrotlidec-1.0.9         |       h166bdaf_9          32 KB  conda-forge
+	libbrotlienc-1.0.9         |       h166bdaf_9         259 KB  conda-forge
+	libcblas-3.11.0            |5_h0358290_openblas          18 KB  conda-forge
+	libdeflate-1.22            |       hb9d3cd8_0          71 KB  conda-forge
+	libevent-2.1.12            |       hf998b51_1         417 KB  conda-forge
+	libfreetype-2.14.1         |       ha770c72_0           7 KB  conda-forge
+	libfreetype6-2.14.1        |       h73754d4_0         378 KB  conda-forge
+	libgfortran-15.2.0         |      h69a702a_16          27 KB  conda-forge
+	libgfortran5-15.2.0        |      h68bc16d_16         2.4 MB  conda-forge
+	libgrpc-1.71.0             |       he753a82_0         7.8 MB  conda-forge
+	libjpeg-turbo-3.1.2        |       hb03c661_0         619 KB  conda-forge
+	liblapack-3.11.0           |5_h47877c9_openblas          18 KB  conda-forge
+	libopenblas-0.3.30         |pthreads_h94d23a6_4         5.7 MB  conda-forge
+	libpng-1.6.54              |       h421ea60_0         310 KB  conda-forge
+	libprotobuf-5.29.3         |       h501fc15_0         3.2 MB  conda-forge
+	libre2-11-2024.07.02       |       hba17884_3         205 KB  conda-forge
+	libsodium-1.0.20           |       h4ab18f5_0         201 KB  conda-forge
+	libthrift-0.22.0           |       h454ac66_1         414 KB  conda-forge
+	libtiff-4.7.0              |       he137b08_1         418 KB  conda-forge
+	libuv-1.51.0               |       hb03c661_1         874 KB  conda-forge
+	libwebp-base-1.6.0         |       hd42ef1d_0         419 KB  conda-forge
+	mako-1.3.10                |     pyhcf101f3_1          70 KB  conda-forge
+	markupsafe-3.0.3           |  py313h3dea7bd_0          25 KB  conda-forge
+	matplotlib-base-3.10.8     |  py313h683a580_0         8.0 MB  conda-forge
+	mlflow-3.8.1               |     pyh707e725_0          18 KB  conda-forge
+	mlflow-skinny-3.8.1        |     pyh707e725_0         1.4 MB  conda-forge
+	mlflow-ui-3.8.1            |     pyh707e725_0         4.4 MB  conda-forge
+	multidict-6.7.0            |  py313h3dea7bd_0          97 KB  conda-forge
+	munkres-1.1.4              |     pyhd8ed1ab_1          15 KB  conda-forge
+	numpy-2.4.1                |  py313hf6604e3_0         8.4 MB  conda-forge
+	openjpeg-2.5.3             |       h55fea9a_1         349 KB  conda-forge
+	openssl-3.6.1              |       h35e630c_1         3.0 MB  conda-forge
+	opentelemetry-api-1.39.1   |     pyhd8ed1ab_0          45 KB  conda-forge
+	opentelemetry-proto-1.39.1 |     pyhd8ed1ab_0          45 KB  conda-forge
+	opentelemetry-sdk-1.39.1   |     pyhd8ed1ab_0          83 KB  conda-forge
+	opentelemetry-semantic-conventions-0.60b1|     pyhd8ed1ab_0         115 KB  conda-forge
+	orc-2.2.0                  |       h372e9aa_0         642 KB
+	pandas-2.3.3               |  py313h08cd8bf_2        14.2 MB  conda-forge
+	paramiko-4.0.0             |     pyhd8ed1ab_0         156 KB  conda-forge
+	pillow-11.3.0              |  py313ha492abd_3        1016 KB  conda-forge
+	prometheus_client-0.24.1   |     pyhd8ed1ab_0          55 KB  conda-forge
+	prometheus_flask_exporter-0.23.2|     pyhd8ed1ab_0          22 KB  conda-forge
+	propcache-0.3.1            |  py313h8060acc_0          52 KB  conda-forge
+	protobuf-5.29.3            |  py313h386a9ef_0         473 KB  conda-forge
+	pyarrow-21.0.0             |  py313h86c3e14_1         9.1 MB
+	pyasn1-0.6.2               |     pyhd8ed1ab_0          62 KB  conda-forge
+	pyasn1-modules-0.4.2       |     pyhd8ed1ab_0          94 KB  conda-forge
+	pydantic-extra-types-2.11.0|     pyhd8ed1ab_0          63 KB  conda-forge
+	pymysql-1.1.2              |     pyhcf101f3_0          45 KB  conda-forge
+	pynacl-1.6.2               |  py313h07c4f96_0         1.1 MB  conda-forge
+	pyopenssl-25.3.0           |     pyhd8ed1ab_0         123 KB  conda-forge
+	pyparsing-3.3.2            |     pyhcf101f3_0         108 KB  conda-forge
+	python-dateutil-2.9.0.post0|     pyhe01879c_2         228 KB  conda-forge
+	python-multipart-0.0.22    |     pyhcf101f3_0          30 KB  conda-forge
+	python-tzdata-2025.3       |     pyhd8ed1ab_0         140 KB  conda-forge
+	pytz-2025.2                |     pyhd8ed1ab_0         185 KB  conda-forge
+	pyu2f-0.1.5                |     pyhd8ed1ab_1          36 KB  conda-forge
+	pywin32-on-windows-0.1.0   |     pyh1179c8e_3           5 KB  conda-forge
+	pyyaml-6.0.3               |  py313h3dea7bd_0         202 KB  conda-forge
+	qhull-2020.2               |       h434a139_5         540 KB  conda-forge
+	querystring_parser-1.2.4   |     pyhd8ed1ab_2          13 KB  conda-forge
+	re2-2024.07.02             |       h9925aae_3          26 KB  conda-forge
+	rich-toolkit-0.17.1        |     pyhcf101f3_0          30 KB  conda-forge
+	rsa-4.9.1                  |     pyhd8ed1ab_0          31 KB  conda-forge
+	s2n-1.5.25                 |       h5ac9029_1         377 KB  conda-forge
+	s3transfer-0.16.0          |     pyhd8ed1ab_0          65 KB  conda-forge
+	scikit-learn-1.8.0         |np2py313h16d504d_1         9.4 MB  conda-forge
+	scipy-1.17.0               |  py313h4b8bb8b_1        16.1 MB  conda-forge
+	six-1.17.0                 |     pyhe01879c_1          18 KB  conda-forge
+	smmap-5.0.2                |     pyhd8ed1ab_0          25 KB  conda-forge
+	snappy-1.2.2               |       h03e3b7b_1          45 KB  conda-forge
+	sniffio-1.3.1              |     pyhd8ed1ab_2          15 KB  conda-forge
+	sqlalchemy-2.0.46          |  py313h54dd161_1         3.7 MB  conda-forge
+	sqlparse-0.5.5             |     pyhcf101f3_0          43 KB  conda-forge
+	starlette-0.50.0           |     pyhfdc7a7d_0          63 KB  conda-forge
+	threadpoolctl-3.6.0        |     pyhecae5ae_0          23 KB  conda-forge
+	utf8proc-2.6.1             |       h5eee18b_1          93 KB
+	uvicorn-0.40.0             |     pyhc90fa1f_0          54 KB  conda-forge
+	uvicorn-standard-0.40.0    |       h4cd5af1_0           4 KB  conda-forge
+	uvloop-0.22.1              |  py313h07c4f96_1         577 KB  conda-forge
+	watchfiles-1.1.1           |  py313h5c7d99a_0         411 KB  conda-forge
+	websocket-client-1.9.0     |     pyhd8ed1ab_0          60 KB  conda-forge
+	websockets-16.0            |  py313h54dd161_1         359 KB  conda-forge
+	werkzeug-3.1.5             |     pyhcf101f3_0         251 KB  conda-forge
+	wrapt-2.0.1                |  py313h07c4f96_1          86 KB  conda-forge
+	yaml-0.2.5                 |       h280c20c_3          83 KB  conda-forge
+	yarl-1.22.0                |  py313h3dea7bd_0         147 KB  conda-forge
+	zipp-3.23.0                |     pyhcf101f3_1          24 KB  conda-forge
+	------------------------------------------------------------
+	Total:       146.6 MB
+	
+	The following NEW packages will be INSTALLED:
+	
+	aiohappyeyeballs   conda-forge/noarch::aiohappyeyeballs-2.6.1-pyhd8ed1ab_0
+	aiohttp            conda-forge/linux-64::aiohttp-3.13.3-py313hd6074c6_0
+	aiosignal          conda-forge/noarch::aiosignal-1.4.0-pyhd8ed1ab_0
+	alembic            conda-forge/noarch::alembic-1.18.1-pyhcf101f3_0
+	annotated-doc      conda-forge/noarch::annotated-doc-0.0.4-pyhcf101f3_0
+	anyio              conda-forge/noarch::anyio-4.12.1-pyhcf101f3_0
+	arrow-cpp          pkgs/main/linux-64::arrow-cpp-21.0.0-hac1acdb_1
+	attrs              conda-forge/noarch::attrs-25.4.0-pyhcf101f3_1
+	aws-c-auth         pkgs/main/linux-64::aws-c-auth-0.9.0-hb25bd0a_2
+	aws-c-cal          conda-forge/linux-64::aws-c-cal-0.9.2-he7b75e1_1
+	aws-c-common       conda-forge/linux-64::aws-c-common-0.12.4-hb03c661_0
+	aws-c-compression  conda-forge/linux-64::aws-c-compression-0.3.1-h92c474e_6
+	aws-c-event-stream conda-forge/linux-64::aws-c-event-stream-0.5.6-h4d13e43_1
+	aws-c-http         conda-forge/linux-64::aws-c-http-0.10.4-hbd4fbc6_1
+	aws-c-io           conda-forge/linux-64::aws-c-io-0.21.4-h88603f0_1
+	aws-c-mqtt         conda-forge/linux-64::aws-c-mqtt-0.13.3-h680d5b3_4
+	aws-c-s3           pkgs/main/linux-64::aws-c-s3-0.8.7-h3ff94e8_0
+	aws-c-sdkutils     conda-forge/linux-64::aws-c-sdkutils-0.2.4-h92c474e_1
+	aws-checksums      conda-forge/linux-64::aws-checksums-0.2.7-h92c474e_2
+	aws-crt-cpp        pkgs/main/linux-64::aws-crt-cpp-0.34.0-h7934f7d_0
+	aws-sdk-cpp        pkgs/main/linux-64::aws-sdk-cpp-1.11.638-hac3f51a_0
+	bcrypt             conda-forge/linux-64::bcrypt-5.0.0-py313h843e2db_1
+	blinker            conda-forge/noarch::blinker-1.9.0-pyhff2d567_0
+	boto3              conda-forge/noarch::boto3-1.42.36-pyhd8ed1ab_0
+	botocore           conda-forge/noarch::botocore-1.42.36-pyhd8ed1ab_0
+	brotli             conda-forge/linux-64::brotli-1.0.9-h166bdaf_9
+	brotli-bin         conda-forge/linux-64::brotli-bin-1.0.9-h166bdaf_9
+	cachetools         conda-forge/noarch::cachetools-6.2.5-pyhd8ed1ab_0
+	cloudpickle        conda-forge/noarch::cloudpickle-3.1.2-pyhcf101f3_1
+	contourpy          conda-forge/linux-64::contourpy-1.3.3-py313hc8edb43_4
+	cycler             conda-forge/noarch::cycler-0.12.1-pyhcf101f3_2
+	databricks-sdk     conda-forge/noarch::databricks-sdk-0.73.0-pyhd8ed1ab_0
+	deprecated         conda-forge/noarch::deprecated-1.3.1-pyhd8ed1ab_1
+	dnspython          conda-forge/noarch::dnspython-2.8.0-pyhcf101f3_0
+	docker-py          conda-forge/noarch::docker-py-7.1.0-pyhd8ed1ab_1
+	email-validator    conda-forge/noarch::email-validator-2.3.0-pyhd8ed1ab_0
+	email_validator    conda-forge/noarch::email_validator-2.3.0-hd8ed1ab_0
+	exceptiongroup     conda-forge/noarch::exceptiongroup-1.3.1-pyhd8ed1ab_0
+	fastapi            conda-forge/noarch::fastapi-0.128.0-h0ea4129_1
+	fastapi-cli        conda-forge/noarch::fastapi-cli-0.0.20-pyhcf101f3_0
+	fastapi-core       conda-forge/noarch::fastapi-core-0.128.0-pyhcf101f3_1
+	flask              conda-forge/noarch::flask-3.1.2-pyhd8ed1ab_0
+	flask-cors         conda-forge/noarch::flask-cors-6.0.2-pyhcf101f3_0
+	fonttools          conda-forge/linux-64::fonttools-4.61.1-py313h3dea7bd_0
+	freetype           conda-forge/linux-64::freetype-2.14.1-ha770c72_0
+	frozenlist         conda-forge/linux-64::frozenlist-1.7.0-py313h6b9daa2_0
+	gflags             conda-forge/linux-64::gflags-2.2.2-h5888daf_1005
+	gitdb              conda-forge/noarch::gitdb-4.0.12-pyhd8ed1ab_0
+	gitpython          conda-forge/noarch::gitpython-3.1.46-pyhd8ed1ab_0
+	glog               conda-forge/linux-64::glog-0.5.0-h48cff8f_0
+	google-auth        conda-forge/noarch::google-auth-2.48.0-pyhcf101f3_0
+	graphene           conda-forge/noarch::graphene-3.4.3-pyhd8ed1ab_1
+	graphql-core       conda-forge/noarch::graphql-core-3.2.7-pyhcf101f3_0
+	graphql-relay      conda-forge/noarch::graphql-relay-3.2.0-pyhd8ed1ab_1
+	greenlet           conda-forge/linux-64::greenlet-3.3.1-py313h7033f15_0
+	gunicorn           conda-forge/linux-64::gunicorn-23.0.0-py313h78bf25f_3
+	h11                conda-forge/noarch::h11-0.16.0-pyhcf101f3_1
+	h2                 conda-forge/noarch::h2-4.3.0-pyhcf101f3_0
+	hpack              conda-forge/noarch::hpack-4.1.0-pyhd8ed1ab_0
+	httpcore           conda-forge/noarch::httpcore-1.0.9-pyh29332c3_0
+	httptools          conda-forge/linux-64::httptools-0.7.1-py313h07c4f96_1
+	httpx              conda-forge/noarch::httpx-0.28.1-pyhd8ed1ab_0
+	huey               conda-forge/noarch::huey-2.6.0-pyhcf101f3_0
+	hyperframe         conda-forge/noarch::hyperframe-6.1.0-pyhd8ed1ab_0
+	importlib-metadata conda-forge/noarch::importlib-metadata-8.7.0-pyhe01879c_1
+	invoke             conda-forge/noarch::invoke-2.2.1-pyhd8ed1ab_0
+	itsdangerous       conda-forge/noarch::itsdangerous-2.2.0-pyhd8ed1ab_1
+	jinja2             conda-forge/noarch::jinja2-3.1.6-pyhcf101f3_1
+	jmespath           conda-forge/noarch::jmespath-1.1.0-pyhcf101f3_1
+	joblib             conda-forge/noarch::joblib-1.5.3-pyhd8ed1ab_0
+	kiwisolver         conda-forge/linux-64::kiwisolver-1.4.9-py313hc8edb43_2
+	lcms2              conda-forge/linux-64::lcms2-2.17-h717163a_0
+	lerc               conda-forge/linux-64::lerc-4.0.0-h0aef613_1
+	libabseil          conda-forge/linux-64::libabseil-20250127.0-cxx17_hbbce691_0
+	libblas            conda-forge/linux-64::libblas-3.11.0-5_h4a7cf45_openblas
+	libbrotlicommon    conda-forge/linux-64::libbrotlicommon-1.0.9-h166bdaf_9
+	libbrotlidec       conda-forge/linux-64::libbrotlidec-1.0.9-h166bdaf_9
+	libbrotlienc       conda-forge/linux-64::libbrotlienc-1.0.9-h166bdaf_9
+	libcblas           conda-forge/linux-64::libcblas-3.11.0-5_h0358290_openblas
+	libdeflate         conda-forge/linux-64::libdeflate-1.22-hb9d3cd8_0
+	libevent           conda-forge/linux-64::libevent-2.1.12-hf998b51_1
+	libfreetype        conda-forge/linux-64::libfreetype-2.14.1-ha770c72_0
+	libfreetype6       conda-forge/linux-64::libfreetype6-2.14.1-h73754d4_0
+	libgfortran        conda-forge/linux-64::libgfortran-15.2.0-h69a702a_16
+	libgfortran5       conda-forge/linux-64::libgfortran5-15.2.0-h68bc16d_16
+	libgrpc            conda-forge/linux-64::libgrpc-1.71.0-he753a82_0
+	libjpeg-turbo      conda-forge/linux-64::libjpeg-turbo-3.1.2-hb03c661_0
+	liblapack          conda-forge/linux-64::liblapack-3.11.0-5_h47877c9_openblas
+	libopenblas        conda-forge/linux-64::libopenblas-0.3.30-pthreads_h94d23a6_4
+	libpng             conda-forge/linux-64::libpng-1.6.54-h421ea60_0
+	libprotobuf        conda-forge/linux-64::libprotobuf-5.29.3-h501fc15_0
+	libre2-11          conda-forge/linux-64::libre2-11-2024.07.02-hba17884_3
+	libsodium          conda-forge/linux-64::libsodium-1.0.20-h4ab18f5_0
+	libthrift          conda-forge/linux-64::libthrift-0.22.0-h454ac66_1
+	libtiff            conda-forge/linux-64::libtiff-4.7.0-he137b08_1
+	libuv              conda-forge/linux-64::libuv-1.51.0-hb03c661_1
+	libwebp-base       conda-forge/linux-64::libwebp-base-1.6.0-hd42ef1d_0
+	mako               conda-forge/noarch::mako-1.3.10-pyhcf101f3_1
+	markupsafe         conda-forge/linux-64::markupsafe-3.0.3-py313h3dea7bd_0
+	matplotlib-base    conda-forge/linux-64::matplotlib-base-3.10.8-py313h683a580_0
+	mlflow             conda-forge/noarch::mlflow-3.8.1-pyh707e725_0
+	mlflow-skinny      conda-forge/noarch::mlflow-skinny-3.8.1-pyh707e725_0
+	mlflow-ui          conda-forge/noarch::mlflow-ui-3.8.1-pyh707e725_0
+	multidict          conda-forge/linux-64::multidict-6.7.0-py313h3dea7bd_0
+	munkres            conda-forge/noarch::munkres-1.1.4-pyhd8ed1ab_1
+	numpy              conda-forge/linux-64::numpy-2.4.1-py313hf6604e3_0
+	openjpeg           conda-forge/linux-64::openjpeg-2.5.3-h55fea9a_1
+	opentelemetry-api  conda-forge/noarch::opentelemetry-api-1.39.1-pyhd8ed1ab_0
+	opentelemetry-pro~ conda-forge/noarch::opentelemetry-proto-1.39.1-pyhd8ed1ab_0
+	opentelemetry-sdk  conda-forge/noarch::opentelemetry-sdk-1.39.1-pyhd8ed1ab_0
+	opentelemetry-sem~ conda-forge/noarch::opentelemetry-semantic-conventions-0.60b1-pyhd8ed1ab_0
+	orc                pkgs/main/linux-64::orc-2.2.0-h372e9aa_0
+	pandas             conda-forge/linux-64::pandas-2.3.3-py313h08cd8bf_2
+	paramiko           conda-forge/noarch::paramiko-4.0.0-pyhd8ed1ab_0
+	pillow             conda-forge/linux-64::pillow-11.3.0-py313ha492abd_3
+	prometheus_client  conda-forge/noarch::prometheus_client-0.24.1-pyhd8ed1ab_0
+	prometheus_flask_~ conda-forge/noarch::prometheus_flask_exporter-0.23.2-pyhd8ed1ab_0
+	propcache          conda-forge/linux-64::propcache-0.3.1-py313h8060acc_0
+	protobuf           conda-forge/linux-64::protobuf-5.29.3-py313h386a9ef_0
+	pyarrow            pkgs/main/linux-64::pyarrow-21.0.0-py313h86c3e14_1
+	pyasn1             conda-forge/noarch::pyasn1-0.6.2-pyhd8ed1ab_0
+	pyasn1-modules     conda-forge/noarch::pyasn1-modules-0.4.2-pyhd8ed1ab_0
+	pydantic-extra-ty~ conda-forge/noarch::pydantic-extra-types-2.11.0-pyhd8ed1ab_0
+	pymysql            conda-forge/noarch::pymysql-1.1.2-pyhcf101f3_0
+	pynacl             conda-forge/linux-64::pynacl-1.6.2-py313h07c4f96_0
+	pyopenssl          conda-forge/noarch::pyopenssl-25.3.0-pyhd8ed1ab_0
+	pyparsing          conda-forge/noarch::pyparsing-3.3.2-pyhcf101f3_0
+	python-dateutil    conda-forge/noarch::python-dateutil-2.9.0.post0-pyhe01879c_2
+	python-multipart   conda-forge/noarch::python-multipart-0.0.22-pyhcf101f3_0
+	python-tzdata      conda-forge/noarch::python-tzdata-2025.3-pyhd8ed1ab_0
+	pytz               conda-forge/noarch::pytz-2025.2-pyhd8ed1ab_0
+	pyu2f              conda-forge/noarch::pyu2f-0.1.5-pyhd8ed1ab_1
+	pywin32-on-windows conda-forge/noarch::pywin32-on-windows-0.1.0-pyh1179c8e_3
+	pyyaml             conda-forge/linux-64::pyyaml-6.0.3-py313h3dea7bd_0
+	qhull              conda-forge/linux-64::qhull-2020.2-h434a139_5
+	querystring_parser conda-forge/noarch::querystring_parser-1.2.4-pyhd8ed1ab_2
+	re2                conda-forge/linux-64::re2-2024.07.02-h9925aae_3
+	rich-toolkit       conda-forge/noarch::rich-toolkit-0.17.1-pyhcf101f3_0
+	rsa                conda-forge/noarch::rsa-4.9.1-pyhd8ed1ab_0
+	s2n                conda-forge/linux-64::s2n-1.5.25-h5ac9029_1
+	s3transfer         conda-forge/noarch::s3transfer-0.16.0-pyhd8ed1ab_0
+	scikit-learn       conda-forge/linux-64::scikit-learn-1.8.0-np2py313h16d504d_1
+	scipy              conda-forge/linux-64::scipy-1.17.0-py313h4b8bb8b_1
+	six                conda-forge/noarch::six-1.17.0-pyhe01879c_1
+	smmap              conda-forge/noarch::smmap-5.0.2-pyhd8ed1ab_0
+	snappy             conda-forge/linux-64::snappy-1.2.2-h03e3b7b_1
+	sniffio            conda-forge/noarch::sniffio-1.3.1-pyhd8ed1ab_2
+	sqlalchemy         conda-forge/linux-64::sqlalchemy-2.0.46-py313h54dd161_1
+	sqlparse           conda-forge/noarch::sqlparse-0.5.5-pyhcf101f3_0
+	starlette          conda-forge/noarch::starlette-0.50.0-pyhfdc7a7d_0
+	threadpoolctl      conda-forge/noarch::threadpoolctl-3.6.0-pyhecae5ae_0
+	utf8proc           pkgs/main/linux-64::utf8proc-2.6.1-h5eee18b_1
+	uvicorn            conda-forge/noarch::uvicorn-0.40.0-pyhc90fa1f_0
+	uvicorn-standard   conda-forge/noarch::uvicorn-standard-0.40.0-h4cd5af1_0
+	uvloop             conda-forge/linux-64::uvloop-0.22.1-py313h07c4f96_1
+	watchfiles         conda-forge/linux-64::watchfiles-1.1.1-py313h5c7d99a_0
+	websocket-client   conda-forge/noarch::websocket-client-1.9.0-pyhd8ed1ab_0
+	websockets         conda-forge/linux-64::websockets-16.0-py313h54dd161_1
+	werkzeug           conda-forge/noarch::werkzeug-3.1.5-pyhcf101f3_0
+	wrapt              conda-forge/linux-64::wrapt-2.0.1-py313h07c4f96_1
+	yaml               conda-forge/linux-64::yaml-0.2.5-h280c20c_3
+	yarl               conda-forge/linux-64::yarl-1.22.0-py313h3dea7bd_0
+	zipp               conda-forge/noarch::zipp-3.23.0-pyhcf101f3_1
+	
+	The following packages will be UPDATED:
+	
+	ca-certificates    pkgs/main/linux-64::ca-certificates-2~ --> conda-forge/noarch::ca-certificates-2026.1.4-hbd8a1cb_0
+	certifi            pkgs/main/linux-64::certifi-2025.11.1~ --> conda-forge/noarch::certifi-2026.1.4-pyhd8ed1ab_0
+	openssl              pkgs/main::openssl-3.0.18-hd6dcaed_0 --> conda-forge::openssl-3.6.1-h35e630c_1
+	
+	
+	
+	Downloading and Extracting Packages: ...working...scipy-1.17.0         | 16.1 MB   |            |   0%
+	pandas-2.3.3         | 14.2 MB   |            |   0%[A
+	arrow-cpp-21.0.0     | 12.3 MB   |            |   0%[A[A
+	scikit-learn-1.8.0   | 9.4 MB    |            |   0%[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    |            |   0%[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    |            |   0%[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    |            |   0% [A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    |            |   0% [A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    |            |   0%[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    |            |   0% [A[A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A
+	sqlalchemy-2.0.46    | 3.7 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A
+	aws-sdk-cpp-1.11.638 | 3.3 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A
+	libprotobuf-5.29.3   | 3.2 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	openssl-3.6.1        | 3.0 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	fonttools-4.61.1     | 2.9 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	libgfortran5-15.2.0  | 2.4 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	mlflow-skinny-3.8.1  | 1.4 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	libabseil-20250127.0 | 1.3 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    |            |   0% [A[A[A[A
+	pandas-2.3.3         | 14.2 MB   |            |   0% [A
+	arrow-cpp-21.0.0     | 12.3 MB   |            |   0% [A[Ascipy-1.17.0         | 16.1 MB   |            |   0%
+	scikit-learn-1.8.0   | 9.4 MB    |            |   0%[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | 1          |   2%[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | 1          |   1%[A
+	arrow-cpp-21.0.0     | 12.3 MB   | 1          |   1% [A[A
+	scikit-learn-1.8.0   | 9.4 MB    | 1          |   2%[A[A[Ascipy-1.17.0         | 16.1 MB   |            |   1%
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | 2          |   3% [A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | 2          |   2%[A
+	arrow-cpp-21.0.0     | 12.3 MB   | 2          |   2% [A[A
+	scikit-learn-1.8.0   | 9.4 MB    | 2          |   3% [A[A[Ascipy-1.17.0         | 16.1 MB   | 1          |   1%
+	pyarrow-21.0.0       | 9.1 MB    | 4          |   4%[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | 3          |   3%[A
+	arrow-cpp-21.0.0     | 12.3 MB   | 3          |   3% [A[A
+	scikit-learn-1.8.0   | 9.4 MB    | 4          |   4% [A[A[Ascipy-1.17.0         | 16.1 MB   | 1          |   2%
+	pyarrow-21.0.0       | 9.1 MB    | 5          |   5% [A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | 4          |   4% [A
+	arrow-cpp-21.0.0     | 12.3 MB   | 4          |   4%[A[A
+	scikit-learn-1.8.0   | 9.4 MB    | 5          |   6%[A[A[Ascipy-1.17.0         | 16.1 MB   | 2          |   3%
+	pyarrow-21.0.0       | 9.1 MB    | 6          |   7%[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | 5          |   5% [A
+	scikit-learn-1.8.0   | 9.4 MB    | 7          |   7%[A[A[Ascipy-1.17.0         | 16.1 MB   | 3          |   4%
+	arrow-cpp-21.0.0     | 12.3 MB   | 5          |   5% [A[A
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | 8          |   8% [A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | 6          |   6% [A
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | 8          |   9% [A[A[A
+scipy-1.17.0         | 16.1 MB   | 4          |   4%
+	arrow-cpp-21.0.0     | 12.3 MB   | 7          |   7%[A[A
+	pyarrow-21.0.0       | 9.1 MB    | 9          |  10%[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | 7          |   7%[Ascipy-1.17.0         | 16.1 MB   | 5          |   5%
+	scikit-learn-1.8.0   | 9.4 MB    | #          |  10%[A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | 8          |   8% [A[A
+	pyarrow-21.0.0       | 9.1 MB    | #1         |  11% [A[A[A[Ascipy-1.17.0         | 16.1 MB   | 5          |   6%
+	pandas-2.3.3         | 14.2 MB   | 8          |   8%[A
+	scikit-learn-1.8.0   | 9.4 MB    | #1         |  12% [A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | #2         |  13% [A[A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | 9          |  10% [A[Ascipy-1.17.0         | 16.1 MB   | 6          |   7%
+	scikit-learn-1.8.0   | 9.4 MB    | #3         |  13% [A[A[A
+	pandas-2.3.3         | 14.2 MB   | 8          |   9%[A
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | #3         |  14%[A[A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | #          |  11% [A[Ascipy-1.17.0         | 16.1 MB   | 7          |   7%
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | #4         |  14%[A[A[A
+	pandas-2.3.3         | 14.2 MB   | 9          |   9% [A
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | #5         |  15% [A[A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | #1         |  11%[A[A
+	pandas-2.3.3         | 14.2 MB   | #          |  11% [A
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | #6         |  16% [A[A[A[Ascipy-1.17.0         | 16.1 MB   | 7          |   8%
+	arrow-cpp-21.0.0     | 12.3 MB   | #2         |  12%[A[A
+	pandas-2.3.3         | 14.2 MB   | #1         |  12%[A
+	pyarrow-21.0.0       | 9.1 MB    | #7         |  18% [A[A[A[A
+	scikit-learn-1.8.0   | 9.4 MB    | #5         |  15% [A[A[Ascipy-1.17.0         | 16.1 MB   | 8          |   8%
+	arrow-cpp-21.0.0     | 12.3 MB   | #3         |  13% [A[A
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | #6         |  16% [A[A[A
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | #8         |  19% [A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | #2         |  13% [A
+scipy-1.17.0         | 16.1 MB   | 9          |   9%
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | #4         |  14%[A[A
+	pandas-2.3.3         | 14.2 MB   | #3         |  13% [A
+	pyarrow-21.0.0       | 9.1 MB    | ##         |  20%[A[A[A[Ascipy-1.17.0         | 16.1 MB   | 9          |  10%
+	scikit-learn-1.8.0   | 9.4 MB    | #7         |  17% [A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #5         |  15% [A[A
+	pyarrow-21.0.0       | 9.1 MB    | ##1        |  21% [A[A[A[Ascipy-1.17.0         | 16.1 MB   | #          |  10%
+	pandas-2.3.3         | 14.2 MB   | #4         |  14% [A
+	scikit-learn-1.8.0   | 9.4 MB    | #9         |  19% [A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | #6         |  17% [A[A
+	pandas-2.3.3         | 14.2 MB   | #5         |  15% [A
+	scikit-learn-1.8.0   | 9.4 MB    | ##         |  21%[A[A[Ascipy-1.17.0         | 16.1 MB   | #          |  11%
+	pyarrow-21.0.0       | 9.1 MB    | ##2        |  22% [A[A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #7         |  18% [A[A
+	pandas-2.3.3         | 14.2 MB   | #6         |  16% [A
+	scikit-learn-1.8.0   | 9.4 MB    | ##1        |  22%[A[A[Ascipy-1.17.0         | 16.1 MB   | #1         |  12%
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | #8         |  19% [A[A
+	pandas-2.3.3         | 14.2 MB   | #7         |  17% [A
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | ##3        |  23% [A[A[A
+scipy-1.17.0         | 16.1 MB   | #2         |  12%
+	arrow-cpp-21.0.0     | 12.3 MB   | #9         |  20% [A[A
+	pandas-2.3.3         | 14.2 MB   | #8         |  18%[A
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | ##4        |  25% [A[A[A
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | ##2        |  23% [A[A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | ##         |  21% [A[A
+	pandas-2.3.3         | 14.2 MB   | #9         |  19% [A
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | ##6        |  26% [A[A[A
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | ##4        |  25% [A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ##         |  21% [A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | ##2        |  22% [A[Ascipy-1.17.0         | 16.1 MB   | #3         |  13%
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | ##8        |  28% [A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | ##3        |  24% [A[A
+	pandas-2.3.3         | 14.2 MB   | ##1        |  22% [A
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | ##9        |  30% [A[A[Ascipy-1.17.0         | 16.1 MB   | #3         |  14%
+	arrow-cpp-21.0.0     | 12.3 MB   | ##5        |  25% [A[A
+	pandas-2.3.3         | 14.2 MB   | ##2        |  23% [A
+	scikit-learn-1.8.0   | 9.4 MB    | ###1       |  31%[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ##5        |  26% [A[A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | ##6        |  26% [A[A
+	pandas-2.3.3         | 14.2 MB   | ##4        |  24% [A
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | ###2       |  33% [A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | ##7        |  28%[A[Ascipy-1.17.0         | 16.1 MB   | #4         |  15%
+	pandas-2.3.3         | 14.2 MB   | ##5        |  25% [A
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | ###4       |  34%[A[A[Ascipy-1.17.0         | 16.1 MB   | #5         |  15%
+	scikit-learn-1.8.0   | 9.4 MB    | ###5       |  36% [A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | ##8        |  29% [A[A
+	pandas-2.3.3         | 14.2 MB   | ##6        |  26%[Ascipy-1.17.0         | 16.1 MB   | #5         |  16%
+	arrow-cpp-21.0.0     | 12.3 MB   | ###        |  31% [A[A
+	pyarrow-21.0.0       | 9.1 MB    | ##7        |  27%[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ##7        |  27%[A
+	scikit-learn-1.8.0   | 9.4 MB    | ###6       |  37% [A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | ###1       |  32% [A[A
+	pyarrow-21.0.0       | 9.1 MB    | ##8        |  28% [A[A[A[A
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | ###9       |  39% [A[A[A
+	pandas-2.3.3         | 14.2 MB   | ##7        |  28% [A
+	arrow-cpp-21.0.0     | 12.3 MB   | ###2       |  33% [A[A
+	pyarrow-21.0.0       | 9.1 MB    | ##9        |  30% [A[A[A[A
+	scikit-learn-1.8.0   | 9.4 MB    | ####       |  41% [A[A[A
+	pandas-2.3.3         | 14.2 MB   | ##8        |  29% [A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | ###3       |  34% [A[A
+scipy-1.17.0         | 16.1 MB   | #6         |  17%
+	pandas-2.3.3         | 14.2 MB   | ##9        |  30%[A
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | ###        |  31% [A[A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | ###4       |  35% [A[A
+	pandas-2.3.3         | 14.2 MB   | ###        |  31% [A
+	scikit-learn-1.8.0   | 9.4 MB    | ####2      |  42% [A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ###1       |  32% [A[A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | ###5       |  36% [A[A
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | ###2       |  33% [A[A[A[A
+	scikit-learn-1.8.0   | 9.4 MB    | ####3      |  43% [A[A[A
+	pandas-2.3.3         | 14.2 MB   | ###1       |  31% [Ascipy-1.17.0         | 16.1 MB   | #7         |  17%
+	arrow-cpp-21.0.0     | 12.3 MB   | ###7       |  37% [A[A
+	pandas-2.3.3         | 14.2 MB   | ###2       |  32% [A
+	scikit-learn-1.8.0   | 9.4 MB    | ####4      |  44% [A[A[Ascipy-1.17.0         | 16.1 MB   | #7         |  18%
+	arrow-cpp-21.0.0     | 12.3 MB   | ###8       |  38% [A[A
+	pandas-2.3.3         | 14.2 MB   | ###3       |  33% [A
+	scikit-learn-1.8.0   | 9.4 MB    | ####5      |  46% [A[A[Ascipy-1.17.0         | 16.1 MB   | #8         |  18%
+	arrow-cpp-21.0.0     | 12.3 MB   | ###9       |  39% [A[A
+	pyarrow-21.0.0       | 9.1 MB    | ###3       |  34% [A[A[A[A
+	scikit-learn-1.8.0   | 9.4 MB    | ####6      |  47% [A[A[A
+	pandas-2.3.3         | 14.2 MB   | ###3       |  34%[A
+	arrow-cpp-21.0.0     | 12.3 MB   | ####       |  40% [A[A
+	pyarrow-21.0.0       | 9.1 MB    | ###4       |  35% [A[A[A[A
+	scikit-learn-1.8.0   | 9.4 MB    | ####7      |  48% [A[A[A
+	pandas-2.3.3         | 14.2 MB   | ###4       |  35% [A
+	pyarrow-21.0.0       | 9.1 MB    | ###5       |  36% [A[A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | ####1      |  41% [A[A
+	scikit-learn-1.8.0   | 9.4 MB    | ####8      |  49% [A[A[A
+	pandas-2.3.3         | 14.2 MB   | ###5       |  36% [Ascipy-1.17.0         | 16.1 MB   | #8         |  19%
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | ####2      |  42% [A[A
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | ####9      |  50% [A[A[Ascipy-1.17.0         | 16.1 MB   | #9         |  19%
+	pandas-2.3.3         | 14.2 MB   | ###6       |  36% [A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | ####2      |  43% [A[A
+	scikit-learn-1.8.0   | 9.4 MB    | #####      |  51%[A[A[Ascipy-1.17.0         | 16.1 MB   | ##         |  20%
+	pandas-2.3.3         | 14.2 MB   | ###7       |  37% [A
+	arrow-cpp-21.0.0     | 12.3 MB   | ####3      |  44% [A[A
+	scikit-learn-1.8.0   | 9.4 MB    | #####2     |  52% [A[A[Ascipy-1.17.0         | 16.1 MB   | ##         |  21%
+	pandas-2.3.3         | 14.2 MB   | ###7       |  38%[A
+	scikit-learn-1.8.0   | 9.4 MB    | #####3     |  53% [A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ###6       |  36% [A[A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | ####4      |  45% [A[A
+	pandas-2.3.3         | 14.2 MB   | ###8       |  38% [A
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | ###7       |  38% [A[A[A[Ascipy-1.17.0         | 16.1 MB   | ##         |  21%
+	scikit-learn-1.8.0   | 9.4 MB    | #####4     |  54% [A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | ####5      |  46%[A[A
+	pandas-2.3.3         | 14.2 MB   | ###9       |  39% [A
+	pyarrow-21.0.0       | 9.1 MB    | ###8       |  39% [A[A[A[A
+	scikit-learn-1.8.0   | 9.4 MB    | #####6     |  56% [A[A[Ascipy-1.17.0         | 16.1 MB   | ##1        |  21%
+	arrow-cpp-21.0.0     | 12.3 MB   | ####6      |  47%[A[A
+	pandas-2.3.3         | 14.2 MB   | ###9       |  40% [Ascipy-1.17.0         | 16.1 MB   | ##1        |  22%
+	arrow-cpp-21.0.0     | 12.3 MB   | ####7      |  47% [A[A
+	pandas-2.3.3         | 14.2 MB   | ####       |  40% [A
+	scikit-learn-1.8.0   | 9.4 MB    | #####7     |  57% [A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | ####8      |  48%[A[Ascipy-1.17.0         | 16.1 MB   | ##2        |  23%
+	pandas-2.3.3         | 14.2 MB   | ####1      |  41% [A
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | #####8     |  59% [A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ###9       |  40% [A[A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | ####9      |  49% [A[A
+	pandas-2.3.3         | 14.2 MB   | ####1      |  42%[A
+	scikit-learn-1.8.0   | 9.4 MB    | #####9     |  60%[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ####1      |  41% [A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ####2      |  43% [A
+	arrow-cpp-21.0.0     | 12.3 MB   | #####      |  50% [A[A
+	scikit-learn-1.8.0   | 9.4 MB    | ######1    |  61% [A[A[A
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | ####2      |  42% [A[A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #####1     |  51%[A[A
+	pandas-2.3.3         | 14.2 MB   | ####3      |  44% [A
+scipy-1.17.0         | 16.1 MB   | ##3        |  23%
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | ######2    |  63%[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ####4      |  45%[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #####2     |  52% [A[A
+scipy-1.17.0         | 16.1 MB   | ##4        |  24%
+	scikit-learn-1.8.0   | 9.4 MB    | ######4    |  64% [A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #####3     |  53%[A[Ascipy-1.17.0         | 16.1 MB   | ##4        |  25%
+	pandas-2.3.3         | 14.2 MB   | ####5      |  46%[A
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | ######5    |  66% [A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #####3     |  54%[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ####2      |  43%[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ####6      |  47% [A
+	scikit-learn-1.8.0   | 9.4 MB    | ######7    |  67%[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ####4      |  45% [A[A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | #####5     |  55% [A[A
+	pandas-2.3.3         | 14.2 MB   | ####7      |  48% [A
+	pandas-2.3.3         | 14.2 MB   | ####8      |  48%[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #####6     |  56% [A[Ascipy-1.17.0         | 16.1 MB   | ##5        |  25%
+	scikit-learn-1.8.0   | 9.4 MB    | ######8    |  68% [A[A[A
+	scikit-learn-1.8.0   | 9.4 MB    | #######    |  71% [A[A[A
+	pandas-2.3.3         | 14.2 MB   | ####9      |  49%[Ascipy-1.17.0         | 16.1 MB   | ##5        |  26%
+	arrow-cpp-21.0.0     | 12.3 MB   | #####7     |  57%[A[A
+	scikit-learn-1.8.0   | 9.4 MB    | #######2   |  72%[A[A[Ascipy-1.17.0         | 16.1 MB   | ##6        |  27%
+	pandas-2.3.3         | 14.2 MB   | #####      |  50% [A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | #####8     |  58% [A[A
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | ####5      |  46%[A[A[A[A
+	scikit-learn-1.8.0   | 9.4 MB    | #######3   |  73% [A[A[A
+	pandas-2.3.3         | 14.2 MB   | #####      |  51% [A
+	pyarrow-21.0.0       | 9.1 MB    | ####6      |  47% [A[A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #####9     |  59% [A[A
+	pyarrow-21.0.0       | 9.1 MB    | ####7      |  47%[A[A[A[A
+	scikit-learn-1.8.0   | 9.4 MB    | #######4   |  74%[A[A[A
+	pandas-2.3.3         | 14.2 MB   | #####1     |  51% [A
+	arrow-cpp-21.0.0     | 12.3 MB   | #####9     |  60% [A[A
+	pyarrow-21.0.0       | 9.1 MB    | ####8      |  48% [A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | #####2     |  52% [A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | ######     |  60%[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ####9      |  49%[A[A[A[A
+	scikit-learn-1.8.0   | 9.4 MB    | #######5   |  75% [A[A[Ascipy-1.17.0         | 16.1 MB   | ##7        |  27%
+	arrow-cpp-21.0.0     | 12.3 MB   | ######1    |  61% [A[A
+	scikit-learn-1.8.0   | 9.4 MB    | #######6   |  76% [A[A[A
+	pandas-2.3.3         | 14.2 MB   | #####2     |  53% [Ascipy-1.17.0         | 16.1 MB   | ##7        |  28%
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | ######1    |  62% [A[A
+	pandas-2.3.3         | 14.2 MB   | #####3     |  53% [A
+	scikit-learn-1.8.0   | 9.4 MB    | #######7   |  77% [A[A[Ascipy-1.17.0         | 16.1 MB   | ##8        |  28%
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | #######8   |  79% [A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | ######2    |  63% [A[A
+	pandas-2.3.3         | 14.2 MB   | #####4     |  54% [Ascipy-1.17.0         | 16.1 MB   | ##9        |  29%
+	scikit-learn-1.8.0   | 9.4 MB    | #######9   |  80%[A[A[A
+	pandas-2.3.3         | 14.2 MB   | #####5     |  55% [A
+	arrow-cpp-21.0.0     | 12.3 MB   | ######3    |  64%[A[A
+	pandas-2.3.3         | 14.2 MB   | #####5     |  56% [A
+	scikit-learn-1.8.0   | 9.4 MB    | ########1  |  81%[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | #####      |  50% [A[A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | ######4    |  64%[A[A
+	scikit-learn-1.8.0   | 9.4 MB    | ########2  |  83% [A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | #####1     |  52% [A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | #####7     |  57% [A
+	arrow-cpp-21.0.0     | 12.3 MB   | ######6    |  66% [A[A
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | #####2     |  53%[A[A[A[A
+	scikit-learn-1.8.0   | 9.4 MB    | ########4  |  84% [A[A[A
+	pandas-2.3.3         | 14.2 MB   | #####7     |  58% [Ascipy-1.17.0         | 16.1 MB   | ##9        |  30%
+	arrow-cpp-21.0.0     | 12.3 MB   | ######7    |  67%[A[A
+	pandas-2.3.3         | 14.2 MB   | #####9     |  59%[A
+	scikit-learn-1.8.0   | 9.4 MB    | ########6  |  86% [A[A[Ascipy-1.17.0         | 16.1 MB   | ###        |  31%
+	arrow-cpp-21.0.0     | 12.3 MB   | ######8    |  69% [A[A
+	scikit-learn-1.8.0   | 9.4 MB    | ########7  |  88% [A[A[A
+	pandas-2.3.3         | 14.2 MB   | ######     |  60%[A
+	pyarrow-21.0.0       | 9.1 MB    | #####3     |  54% [A[A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #######    |  70%[A[A
+	pandas-2.3.3         | 14.2 MB   | ######1    |  61%[A
+	scikit-learn-1.8.0   | 9.4 MB    | ########9  |  89% [A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #######1   |  71%[A[A
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | #####5     |  55% [A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ######2    |  62% [Ascipy-1.17.0         | 16.1 MB   | ###1       |  31%
+	scikit-learn-1.8.0   | 9.4 MB    | #########1 |  91% [A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #######2   |  72% [A[Ascipy-1.17.0         | 16.1 MB   | ###1       |  32%
+	pandas-2.3.3         | 14.2 MB   | ######3    |  63%[A
+	scikit-learn-1.8.0   | 9.4 MB    | #########2 |  93% [A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #######3   |  74% [A[A
+	pandas-2.3.3         | 14.2 MB   | ######4    |  64% [Ascipy-1.17.0         | 16.1 MB   | ###2       |  33%
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | #########4 |  94% [A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #######4   |  75% [A[A
+	pyarrow-21.0.0       | 9.1 MB    | #####6     |  57%[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ######5    |  65% [A
+	pyarrow-21.0.0       | 9.1 MB    | #####7     |  58% [A[A[A[A
+	scikit-learn-1.8.0   | 9.4 MB    | #########5 |  95% [A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | #######5   |  76% [A[A
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | #####9     |  59%[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ######6    |  66% [A
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | #########6 |  97% [A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | #######6   |  77% [A[A
+	pyarrow-21.0.0       | 9.1 MB    | ######     |  61% [A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ######7    |  67%[A
+	scikit-learn-1.8.0   | 9.4 MB    | #########7 |  98% [A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #######7   |  78%[A[Ascipy-1.17.0         | 16.1 MB   | ###3       |  33%
+	pandas-2.3.3         | 14.2 MB   | ######8    |  68% [A
+	
+	
+	scikit-learn-1.8.0   | 9.4 MB    | #########8 |  99% [A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | #######8   |  79% [A[Ascipy-1.17.0         | 16.1 MB   | ###4       |  35%
+	pandas-2.3.3         | 14.2 MB   | ######9    |  69% [A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | ########   |  80% [A[A
+scipy-1.17.0         | 16.1 MB   | ###5       |  36%
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | ######1    |  62% [A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | #######    |  71% [A
+	arrow-cpp-21.0.0     | 12.3 MB   | ########2  |  82%[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ######4    |  64% [A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | #######1   |  72% [A
+	arrow-cpp-21.0.0     | 12.3 MB   | ########3  |  84% [A[A
+	scikit-learn-1.8.0   | 9.4 MB    | ########## | 100% [A[A[A
+	pandas-2.3.3         | 14.2 MB   | #######3   |  74% [Ascipy-1.17.0         | 16.1 MB   | ###6       |  37%
+	arrow-cpp-21.0.0     | 12.3 MB   | ########5  |  85%[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ######5    |  66% [A[A[A[A
+	numpy-2.4.1          | 8.4 MB    |            |   0%[A[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | #######5   |  75% [A
+	arrow-cpp-21.0.0     | 12.3 MB   | ########6  |  87%[A[A
+	numpy-2.4.1          | 8.4 MB    | 2          |   2% [A[A[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ######7    |  67%[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | #######6   |  76% [A
+	pyarrow-21.0.0       | 9.1 MB    | ######9    |  69%[A[A[A[A
+	
+	
+	
+	
+	numpy-2.4.1          | 8.4 MB    | 3          |   4% [A[A[A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | ########8  |  88% [A[Ascipy-1.17.0         | 16.1 MB   | ###7       |  38%
+	pyarrow-21.0.0       | 9.1 MB    | #######    |  70%[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | #######7   |  77% [A
+	arrow-cpp-21.0.0     | 12.3 MB   | ########9  |  90% [A[A
+	
+	
+	
+	
+	numpy-2.4.1          | 8.4 MB    | 5          |   6% [A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ###8       |  38%
+	pandas-2.3.3         | 14.2 MB   | #######8   |  79%[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #########1 |  91%[A[A
+	
+	
+	
+	
+	numpy-2.4.1          | 8.4 MB    | 7          |   8% [A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ###9       |  39%
+	pandas-2.3.3         | 14.2 MB   | #######9   |  79% [A
+	numpy-2.4.1          | 8.4 MB    | 9          |   9%[A[A[A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | #########2 |  92% [A[A
+	
+	
+	
+	pyarrow-21.0.0       | 9.1 MB    | #######1   |  72% [A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ########   |  80%[A
+	
+	
+	
+	
+	numpy-2.4.1          | 8.4 MB    | #1         |  11% [A[A[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | #######3   |  73% [A[A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | #########3 |  93% [A[A
+	pandas-2.3.3         | 14.2 MB   | ########1  |  81%[A
+	numpy-2.4.1          | 8.4 MB    | #2         |  13%[A[A[A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #########4 |  94% [A[Ascipy-1.17.0         | 16.1 MB   | ###9       |  40%
+	pandas-2.3.3         | 14.2 MB   | ########2  |  82% [A
+	numpy-2.4.1          | 8.4 MB    | #4         |  15% [A[A[A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | #########5 |  95%[A[Ascipy-1.17.0         | 16.1 MB   | ####       |  41%
+	pandas-2.3.3         | 14.2 MB   | ########3  |  83% [A
+	
+	
+	
+	
+	numpy-2.4.1          | 8.4 MB    | #6         |  16% [A[A[A[A[A
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | #########6 |  97% [A[A
+	pyarrow-21.0.0       | 9.1 MB    | #######4   |  75%[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ########4  |  84%[A
+	numpy-2.4.1          | 8.4 MB    | #7         |  18% [A[A[A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #########8 |  98% [A[A
+	pyarrow-21.0.0       | 9.1 MB    | #######6   |  76%[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ########5  |  86% [A
+	numpy-2.4.1          | 8.4 MB    | ##         |  20% [A[A[A[A[A
+	arrow-cpp-21.0.0     | 12.3 MB   | #########9 |  99% [A[Ascipy-1.17.0         | 16.1 MB   | ####1      |  41%
+	pyarrow-21.0.0       | 9.1 MB    | #######8   |  78%[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ########6  |  87%[A
+	numpy-2.4.1          | 8.4 MB    | ##2        |  22%[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | ##3        |  24%[A[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ########7  |  88%[Ascipy-1.17.0         | 16.1 MB   | ####1      |  42%
+	pandas-2.3.3         | 14.2 MB   | ########8  |  89%[A
+	numpy-2.4.1          | 8.4 MB    | ##5        |  26% [A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ####3      |  44%
+	
+	arrow-cpp-21.0.0     | 12.3 MB   | ########## | 100% [A[A
+	numpy-2.4.1          | 8.4 MB    | ##7        |  27%[A[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ########9  |  90%[Ascipy-1.17.0         | 16.1 MB   | ####4      |  45%
+	pyarrow-21.0.0       | 9.1 MB    | #######9   |  80% [A[A[A[A
+	
+	
+	
+	
+	numpy-2.4.1          | 8.4 MB    | ###        |  30% [A[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | #########1 |  92% [A
+	pyarrow-21.0.0       | 9.1 MB    | ########2  |  83%[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | ###2       |  32%[A[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | #########3 |  93% [Ascipy-1.17.0         | 16.1 MB   | ####5      |  46%scipy-1.17.0         | 16.1 MB   | ####6      |  46%
+	pandas-2.3.3         | 14.2 MB   | #########4 |  94%[A
+	
+	
+	
+	
+	numpy-2.4.1          | 8.4 MB    | ###4       |  34% [A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ####8      |  49%
+	numpy-2.4.1          | 8.4 MB    | ###8       |  39% [A[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | #########6 |  97%[A
+	pyarrow-21.0.0       | 9.1 MB    | ########4  |  84%[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | #########9 |  99%[A
+	numpy-2.4.1          | 8.4 MB    | ####2      |  42% [A[A[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ########5  |  86%[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ####9      |  50%
+	matplotlib-base-3.10 | 8.0 MB    |            |   0%[A[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | ####4      |  45% [A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    |            |   1% [A[A[A[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ########7  |  87% [A[A[A[Ascipy-1.17.0         | 16.1 MB   | #####      |  51%
+	matplotlib-base-3.10 | 8.0 MB    | 2          |   3%[A[A[A[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ########8  |  89%[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #####1     |  51%
+	numpy-2.4.1          | 8.4 MB    | ####7      |  47%[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | 4          |   4%[A[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | ####9      |  49%[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #####1     |  52%
+	numpy-2.4.1          | 8.4 MB    | #####1     |  51%[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | 6          |   7% [A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #####3     |  53%
+	numpy-2.4.1          | 8.4 MB    | #####2     |  53% [A[A[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ########9  |  90% [A[A[A[Ascipy-1.17.0         | 16.1 MB   | #####4     |  54%
+	matplotlib-base-3.10 | 8.0 MB    | 9          |   9%[A[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | #####4     |  55%[A[A[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | #########1 |  91% [A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | #3         |  14%[A[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | #####7     |  57%[A[A[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | #########2 |  93%[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ########## | 100%[Ascipy-1.17.0         | 16.1 MB   | #####5     |  55%
+	pyarrow-21.0.0       | 9.1 MB    | #########4 |  94% [A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | #####9     |  59% [A[A[A[A[A
+	
+	
+	
+	
+	
+	matplotlib-base-3.10 | 8.0 MB    | #6         |  16%[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #####6     |  56%
+	
+	
+	
+	
+	
+	
+	botocore-1.42.36     | 8.0 MB    |            |   0%[A[A[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | ######2    |  63%[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #####7     |  58%
+	matplotlib-base-3.10 | 8.0 MB    | #9         |  20%[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | 1          |   2%[A[A[A[A[A[A[A
+	
+	
+	
+	
+	numpy-2.4.1          | 8.4 MB    | ######4    |  65% [A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | ##2        |  23%[A[A[A[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | #########5 |  95% [A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | 3          |   4% [A[A[A[A[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | #########6 |  97%[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #####8     |  59%
+	numpy-2.4.1          | 8.4 MB    | ######6    |  67%[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | ##5        |  26%[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | 6          |   6%[A[A[A[A[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | #########7 |  98% [A[A[A[Ascipy-1.17.0         | 16.1 MB   | #####9     |  60%
+	numpy-2.4.1          | 8.4 MB    | ######9    |  69%[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | ##7        |  28% [A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | 8          |   8%[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######     |  61%
+	numpy-2.4.1          | 8.4 MB    | #######1   |  71%[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | ###        |  31%[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | #          |  10% [A[A[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | #######3   |  73%[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | ###3       |  33%[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | #2         |  13%[A[A[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | #######5   |  75% [A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | ###5       |  35%[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | #4         |  15% [A[A[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | #######8   |  78%[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | ###7       |  38% [A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | #6         |  17%[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######1    |  62%
+	
+	
+	
+	
+	numpy-2.4.1          | 8.4 MB    | ########   |  80%[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | ####       |  40%[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	botocore-1.42.36     | 8.0 MB    | #9         |  19% [A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######2    |  62%
+	numpy-2.4.1          | 8.4 MB    | ########2  |  83%[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | ####2      |  42%[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | ##         |  21%[A[A[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | ########4  |  85%[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######2    |  63%
+	matplotlib-base-3.10 | 8.0 MB    | ####4      |  44%[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | ##4        |  25%[A[A[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | ########6  |  87%[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | ####6      |  47%[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | ##7        |  27%[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######3    |  63%
+	matplotlib-base-3.10 | 8.0 MB    | ####8      |  49%[A[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | ########8  |  89%[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | ##9        |  29%[A[A[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | #########1 |  91%[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | #####1     |  51%[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######3    |  64%
+	
+	
+	
+	
+	
+	
+	botocore-1.42.36     | 8.0 MB    | ###1       |  32% [A[A[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | #####3     |  53%[A[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | #########3 |  93%[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######4    |  64%
+	botocore-1.42.36     | 8.0 MB    | ###4       |  34%[A[A[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | #########6 |  96% [A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | #####5     |  55%[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######4    |  65%
+	botocore-1.42.36     | 8.0 MB    | ###6       |  37%[A[A[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | #########8 |  98%[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | #####7     |  57%[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | ###9       |  39%[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######5    |  65%
+	pyarrow-21.0.0       | 9.1 MB    | ########## | 100%[A[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ########## | 100%[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | ######     |  60%[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | ####1      |  42%[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######5    |  66%
+	matplotlib-base-3.10 | 8.0 MB    | ######3    |  64% [A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | ####5      |  45% [A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######5    |  66%
+	matplotlib-base-3.10 | 8.0 MB    | ######6    |  67%[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | ####8      |  48% [A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######6    |  66%
+	matplotlib-base-3.10 | 8.0 MB    | ######9    |  69%[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | #####1     |  51%[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######6    |  67%
+	matplotlib-base-3.10 | 8.0 MB    | #######1   |  72%[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | #####3     |  54%[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######7    |  67%
+	
+	
+	
+	
+	
+	matplotlib-base-3.10 | 8.0 MB    | #######3   |  74%[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | #####7     |  57% [A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    |            |   0%[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	matplotlib-base-3.10 | 8.0 MB    | #######6   |  77%[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######7    |  68%
+	libgrpc-1.71.0       | 7.8 MB    | 1          |   1%[A[A[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | #####9     |  60%[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######7    |  68%
+	matplotlib-base-3.10 | 8.0 MB    | #######9   |  79% [A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | 3          |   3% [A[A[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | ######1    |  62% [A[A[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | ########1  |  81%[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | 4          |   5%[A[A[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | ######3    |  64% [A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######8    |  69%
+	matplotlib-base-3.10 | 8.0 MB    | ########3  |  83% [A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | 7          |   7%[A[A[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | ######6    |  66%[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######9    |  69%
+	matplotlib-base-3.10 | 8.0 MB    | ########5  |  85% [A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | 9          |   9% [A[A[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | ######8    |  68% [A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ######9    |  70%
+	matplotlib-base-3.10 | 8.0 MB    | ########7  |  88%[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | #1         |  12%[A[A[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | #######    |  71%[A[A[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | #########  |  90% [A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | #3         |  14%[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######    |  70%
+	botocore-1.42.36     | 8.0 MB    | #######3   |  73%[A[A[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | #########2 |  92%[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | #6         |  16% [A[A[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | #######5   |  75%[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######    |  71%
+	matplotlib-base-3.10 | 8.0 MB    | #########4 |  95%[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | #8         |  19% [A[A[A[A[A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | ########## | 100% [A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######1   |  71%
+	botocore-1.42.36     | 8.0 MB    | #######8   |  78%[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | ##         |  21% [A[A[A[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | #########7 |  97% [A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######1   |  72%
+	libopenblas-0.3.30   | 5.7 MB    |            |   0%[A[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | ##3        |  23% [A[A[A[A[A[A[A[A
+	matplotlib-base-3.10 | 8.0 MB    | #########9 | 100%[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	libopenblas-0.3.30   | 5.7 MB    | 3          |   4%[A[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | ##5        |  26%[A[A[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | ########1  |  81%[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######2   |  72%
+	libopenblas-0.3.30   | 5.7 MB    | 7          |   7%[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	libgrpc-1.71.0       | 7.8 MB    | ##8        |  28%[A[A[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | ########8  |  89%[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | #1         |  11%[A[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | ###1       |  32%[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######2   |  73%
+	botocore-1.42.36     | 8.0 MB    | #########1 |  92% [A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | ###4       |  34%[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######2   |  73%
+	botocore-1.42.36     | 8.0 MB    | #########5 |  95% [A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | ###7       |  38%[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######3   |  73%
+	botocore-1.42.36     | 8.0 MB    | #########8 |  99% [A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | ####       |  41%[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######3   |  74%
+	libopenblas-0.3.30   | 5.7 MB    | #4         |  15%[A[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | ####5      |  45%[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | #9         |  20%[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######3   |  74%
+	libgrpc-1.71.0       | 7.8 MB    | ####8      |  49%[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | ##2        |  23%[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######4   |  74%
+	matplotlib-base-3.10 | 8.0 MB    | ########## | 100%[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######5   |  75%
+	libopenblas-0.3.30   | 5.7 MB    | ##6        |  26%[A[A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    |            |   0%[A[A[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | #####1     |  52% [A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | 6          |   6% [A[A[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | ##8        |  29% [A[A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | #2         |  13% [A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######5   |  76%
+	
+	
+	
+	
+	
+	
+	
+	
+	libopenblas-0.3.30   | 5.7 MB    | ###3       |  33% [A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	libgrpc-1.71.0       | 7.8 MB    | #####4     |  54% [A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	mlflow-ui-3.8.1      | 4.4 MB    | #9         |  19% [A[A[A[A[A[A[A[A[A[A
+scipy-1.17.0         | 16.1 MB   | #######6   |  76%
+	libopenblas-0.3.30   | 5.7 MB    | ###6       |  36% [A[A[A[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | ########## | 100% [A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | ##7        |  27%[A[A[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | ####       |  41%[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######6   |  77%
+	mlflow-ui-3.8.1      | 4.4 MB    | ###3       |  34%[A[A[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | #####6     |  57% [A[A[A[A[A[A[A[A
+	sqlalchemy-2.0.46    | 3.7 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######7   |  77%
+	sqlalchemy-2.0.46    | 3.7 MB    | 5          |   6% [A[A[A[A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | ####       |  41%[A[A[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | #####9     |  59%[A[A[A[A[A[A[A[A
+	sqlalchemy-2.0.46    | 3.7 MB    | #2         |  12%[A[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######7   |  77%
+	libopenblas-0.3.30   | 5.7 MB    | ####4      |  44% [A[A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | ####6      |  47% [A[A[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | ####6      |  47% [A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######7   |  78%
+	sqlalchemy-2.0.46    | 3.7 MB    | #7         |  18% [A[A[A[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | #####      |  51%[A[A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | #####1     |  52%[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######8   |  78%
+	sqlalchemy-2.0.46    | 3.7 MB    | ##2        |  23%[A[A[A[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | #####3     |  53% [A[A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | #####6     |  57%[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	sqlalchemy-2.0.46    | 3.7 MB    | ##7        |  27% [A[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######8   |  79%
+	libopenblas-0.3.30   | 5.7 MB    | #####6     |  57%[A[A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | ######     |  61% [A[A[A[A[A[A[A[A[A[A
+	sqlalchemy-2.0.46    | 3.7 MB    | ###2       |  33% [A[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######9   |  79%
+	libgrpc-1.71.0       | 7.8 MB    | ######     |  61% [A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | ######5    |  65%[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######9   |  80%
+	mlflow-ui-3.8.1      | 4.4 MB    | ######9    |  69% [A[A[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | #####9     |  60%[A[A[A[A[A[A[A[A[A
+	sqlalchemy-2.0.46    | 3.7 MB    | ###7       |  37% [A[A[A[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | ######2    |  62%[A[A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | #######3   |  73%[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #######9   |  80%
+	sqlalchemy-2.0.46    | 3.7 MB    | ####8      |  48%[A[A[A[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | ######5    |  65% [A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	mlflow-ui-3.8.1      | 4.4 MB    | #######7   |  77%[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ########   |  80%
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	sqlalchemy-2.0.46    | 3.7 MB    | #####4     |  55%[A[A[A[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | ######8    |  69% [A[A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | ########1  |  82% [A[A[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | ######2    |  63% [A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ########   |  81%
+	sqlalchemy-2.0.46    | 3.7 MB    | ######     |  61%[A[A[A[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | ######3    |  64%[A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | ########5  |  85%[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ########1  |  81%
+	sqlalchemy-2.0.46    | 3.7 MB    | ######6    |  66%[A[A[A[A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | ########9  |  89%[A[A[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | #######1   |  72%[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ########1  |  81%
+	mlflow-ui-3.8.1      | 4.4 MB    | #########2 |  93%[A[A[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | #######4   |  74%[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ########1  |  82%
+	sqlalchemy-2.0.46    | 3.7 MB    | #######1   |  71%[A[A[A[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | #######6   |  77%[A[A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | #########6 |  96%[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ########2  |  82%
+	sqlalchemy-2.0.46    | 3.7 MB    | #######8   |  79%[A[A[A[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | ######4    |  65%[A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | ########## | 100%[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ########2  |  83%
+	sqlalchemy-2.0.46    | 3.7 MB    | ########5  |  86%[A[A[A[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | ######7    |  68%[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | #######9   |  80%[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ########3  |  83%
+	sqlalchemy-2.0.46    | 3.7 MB    | #########3 |  93% [A[A[A[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | ########3  |  84% [A[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | ######9    |  69%[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | #######4   |  74% [A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ########3  |  83%
+	libgrpc-1.71.0       | 7.8 MB    | #######8   |  79% [A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ########3  |  84%
+	
+	
+	
+	
+	
+	
+	
+	
+	libopenblas-0.3.30   | 5.7 MB    | ########6  |  87% [A[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | ########3  |  83% [A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ########4  |  84%
+	libopenblas-0.3.30   | 5.7 MB    | #########1 |  91%[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ########5  |  85%
+	libgrpc-1.71.0       | 7.8 MB    | ########6  |  86%[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ########6  |  86%
+	libgrpc-1.71.0       | 7.8 MB    | #########1 |  91%[A[A[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | ########## | 100%[A[A[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | #########7 |  98%[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | #########6 |  96% [A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	aws-sdk-cpp-1.11.638 | 3.3 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	sqlalchemy-2.0.46    | 3.7 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	sqlalchemy-2.0.46    | 3.7 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	aws-sdk-cpp-1.11.638 | 3.3 MB    | #4         |  15% [A[A[A[A[A[A[A[A[A[A[A[A
+scipy-1.17.0         | 16.1 MB   | ########6  |  87%
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	libprotobuf-5.29.3   | 3.2 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	aws-sdk-cpp-1.11.638 | 3.3 MB    | ##8        |  29% [A[A[A[A[A[A[A[A[A[A[A[A
+scipy-1.17.0         | 16.1 MB   | ########8  |  88%
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	libprotobuf-5.29.3   | 3.2 MB    | 7          |   7% [A[A[A[A[A[A[A[A[A[A[A[A[A
+scipy-1.17.0         | 16.1 MB   | ########9  |  90%
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	aws-sdk-cpp-1.11.638 | 3.3 MB    | ####1      |  42% [A[A[A[A[A[A[A[A[A[A[A[A
+	libprotobuf-5.29.3   | 3.2 MB    | #4         |  14%[A[A[A[A[A[A[A[A[A[A[A[A[A
+	aws-sdk-cpp-1.11.638 | 3.3 MB    | #####2     |  52%[A[A[A[A[A[A[A[A[A[A[A[A
+	libprotobuf-5.29.3   | 3.2 MB    | ##1        |  22% [A[A[A[A[A[A[A[A[A[A[A[A[A
+	aws-sdk-cpp-1.11.638 | 3.3 MB    | ######2    |  62% [A[A[A[A[A[A[A[A[A[A[A[A
+	libprotobuf-5.29.3   | 3.2 MB    | ###        |  31%[A[A[A[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #########  |  91%
+	aws-sdk-cpp-1.11.638 | 3.3 MB    | #######1   |  71% [A[A[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #########2 |  92%
+	aws-sdk-cpp-1.11.638 | 3.3 MB    | ########1  |  81% [A[A[A[A[A[A[A[A[A[A[A[A
+	libprotobuf-5.29.3   | 3.2 MB    | ###8       |  38%[A[A[A[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #########3 |  93%
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	libprotobuf-5.29.3   | 3.2 MB    | ####9      |  49%[A[A[A[A[A[A[A[A[A[A[A[A[A
+	aws-sdk-cpp-1.11.638 | 3.3 MB    | ########9  |  90%[A[A[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #########4 |  95%
+	libprotobuf-5.29.3   | 3.2 MB    | #####7     |  57%[A[A[A[A[A[A[A[A[A[A[A[A[A
+	aws-sdk-cpp-1.11.638 | 3.3 MB    | #########8 |  98% [A[A[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #########6 |  96%
+	libprotobuf-5.29.3   | 3.2 MB    | ######7    |  68%[A[A[A[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | #########8 |  98%
+	libprotobuf-5.29.3   | 3.2 MB    | #######7   |  78%[A[A[A[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ########## | 100%
+	libprotobuf-5.29.3   | 3.2 MB    | #########  |  91%[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | ########## | 100%[A[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | ########## | 100%[A[A[A[A[A[A[A[A[A
+	openssl-3.6.1        | 3.0 MB    |            |   1% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	openssl-3.6.1        | 3.0 MB    | #3         |  14%[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	openssl-3.6.1        | 3.0 MB    | ##7        |  27% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	aws-sdk-cpp-1.11.638 | 3.3 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+	openssl-3.6.1        | 3.0 MB    | ####       |  40%[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | ########## | 100% [A[A[A[A[A[A[A[A
+	openssl-3.6.1        | 3.0 MB    | #####3     |  53% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	fonttools-4.61.1     | 2.9 MB    |            |   1%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libgfortran5-15.2.0  | 2.4 MB    |            |   1%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	fonttools-4.61.1     | 2.9 MB    | 9          |   9%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	openssl-3.6.1        | 3.0 MB    | ######6    |  66%[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libgfortran5-15.2.0  | 2.4 MB    | 9          |   9% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	fonttools-4.61.1     | 2.9 MB    | #7         |  18%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	openssl-3.6.1        | 3.0 MB    | #######7   |  78%[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	fonttools-4.61.1     | 2.9 MB    | ##5        |  26% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libprotobuf-5.29.3   | 3.2 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+	openssl-3.6.1        | 3.0 MB    | ########8  |  88%[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	fonttools-4.61.1     | 2.9 MB    | ###5       |  36%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	mlflow-skinny-3.8.1  | 1.4 MB    | 1          |   1%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	openssl-3.6.1        | 3.0 MB    | #########7 |  98%[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libgfortran5-15.2.0  | 2.4 MB    | #7         |  18%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	mlflow-skinny-3.8.1  | 1.4 MB    | #2         |  12% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	fonttools-4.61.1     | 2.9 MB    | ####4      |  44% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libgfortran5-15.2.0  | 2.4 MB    | ##7        |  27%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	mlflow-skinny-3.8.1  | 1.4 MB    | ##8        |  28%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	fonttools-4.61.1     | 2.9 MB    | #####5     |  55%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libgfortran5-15.2.0  | 2.4 MB    | ###4       |  34%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	mlflow-skinny-3.8.1  | 1.4 MB    | ####2      |  43%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	fonttools-4.61.1     | 2.9 MB    | ######6    |  66%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libgfortran5-15.2.0  | 2.4 MB    | ####4      |  44%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	mlflow-skinny-3.8.1  | 1.4 MB    | #####6     |  57% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	fonttools-4.61.1     | 2.9 MB    | #######5   |  76%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libgfortran5-15.2.0  | 2.4 MB    | #####4     |  54%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	mlflow-skinny-3.8.1  | 1.4 MB    | #######3   |  73% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	fonttools-4.61.1     | 2.9 MB    | ########4  |  84% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	mlflow-skinny-3.8.1  | 1.4 MB    | ########9  |  90%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libgfortran5-15.2.0  | 2.4 MB    | ######2    |  63% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	fonttools-4.61.1     | 2.9 MB    | #########3 |  93%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libgfortran5-15.2.0  | 2.4 MB    | #######3   |  74% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	openssl-3.6.1        | 3.0 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libgfortran5-15.2.0  | 2.4 MB    | ########7  |  88%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	mlflow-skinny-3.8.1  | 1.4 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libabseil-20250127.0 | 1.3 MB    | 1          |   1%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libabseil-20250127.0 | 1.3 MB    | ##7        |  27% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	fonttools-4.61.1     | 2.9 MB    | ########## | 100%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libabseil-20250127.0 | 1.3 MB    | #####3     |  53%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libgfortran5-15.2.0  | 2.4 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libgfortran5-15.2.0  | 2.4 MB    | ########## | 100%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libabseil-20250127.0 | 1.3 MB    | #######6   |  77% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libabseil-20250127.0 | 1.3 MB    | #########7 |  98%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libabseil-20250127.0 | 1.3 MB    | ########## | 100%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ########## | 100%
+	arrow-cpp-21.0.0     | 12.3 MB   | ########## | 100% [A[A
+	scikit-learn-1.8.0   | 9.4 MB    | ########## | 100%[A[A[A
+	pyarrow-21.0.0       | 9.1 MB    | ########## | 100% [A[A[A[A
+	numpy-2.4.1          | 8.4 MB    | ########## | 100%[A[A[A[A[A
+	pandas-2.3.3         | 14.2 MB   | ########## | 100% [A
+	
+	
+	
+	
+	
+	matplotlib-base-3.10 | 8.0 MB    | ########## | 100%[A[A[A[A[A[A
+	mlflow-ui-3.8.1      | 4.4 MB    | ########## | 100%[A[A[A[A[A[A[A[A[A[A
+	libopenblas-0.3.30   | 5.7 MB    | ########## | 100%[A[A[A[A[A[A[A[A[A
+	sqlalchemy-2.0.46    | 3.7 MB    | ########## | 100%[A[A[A[A[A[A[A[A[A[A[A
+	libgrpc-1.71.0       | 7.8 MB    | ########## | 100%[A[A[A[A[A[A[A[A
+	botocore-1.42.36     | 8.0 MB    | ########## | 100%[A[A[A[A[A[A[A
+	libprotobuf-5.29.3   | 3.2 MB    | ########## | 100%[A[A[A[A[A[A[A[A[A[A[A[A[A
+	openssl-3.6.1        | 3.0 MB    | ########## | 100%[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	aws-sdk-cpp-1.11.638 | 3.3 MB    | ########## | 100%[A[A[A[A[A[A[A[A[A[A[A[A
+	libgfortran5-15.2.0  | 2.4 MB    | ########## | 100%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	mlflow-skinny-3.8.1  | 1.4 MB    | ########## | 100%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	fonttools-4.61.1     | 2.9 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	libabseil-20250127.0 | 1.3 MB    | ########## | 100%[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[Ascipy-1.17.0         | 16.1 MB   | ########## | 100%
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	[A
+	
+	[A[A
+	
+	
+	[A[A[A
+	
+	
+	
+	[A[A[A[A
+	
+	
+	
+	
+	[A[A[A[A[A
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	[A
+	
+	[A[A
+	
+	
+	[A[A[A
+	[A[A[A[A
+	
+	
+	
+	
+	[A[A[A[A[A
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A
+	[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	[A
+	
+	[A[A
+	
+	
+	[A[A[A
+	
+	
+	
+	[A[A[A[A
+	
+	
+	
+	
+	[A[A[A[A[A
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A
+	[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	[A
+	
+	[A[A
+	
+	
+	[A[A[A
+	
+	
+	
+	[A[A[A[A
+	
+	
+	
+	
+	[A[A[A[A[A
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A
+	[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A
+	[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	[A
+	[A[A
+	
+	
+	[A[A[A[A[A[A[A
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A
+	[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	[A
+	
+	[A[A
+	
+	
+	[A[A[A
+	
+	
+	
+	[A[A[A[A
+	
+	
+	
+	
+	[A[A[A[A[A
+	[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A
+	[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	[A[A[A
+	
+	
+	[A[A[A
+	
+	
+	
+	[A[A[A[A
+	
+	
+	
+	
+	[A[A[A[A[A
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	[A
+	
+	[A[A
+	
+	
+	[A[A[A
+	
+	
+	
+	[A[A[A[A
+	
+	
+	
+	
+	[A[A[A[A[A
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	[A[A[A
+	
+	
+	[A[A[A
+	
+	
+	
+	[A[A[A[A
+	
+	
+	
+	
+	[A[A[A[A[A
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[A[A[A[A[A[A[A[A[A[A[A[A[Adone
+	Preparing transaction:/-\|/-\|/-\|/-\done
+	Verifying transaction:/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|done
+	Executing transaction:-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\done
+exporting to image
+	exporting layers 0/0 39.877
+	writing image sha256:c02e966c57fba0a11dd9376d807f4d6196b6928cd5221d5b9884a263e12e03d2 0/0 0.01
+	naming to docker.io/library/netology-ml:netology-ml 0/0 0.021
