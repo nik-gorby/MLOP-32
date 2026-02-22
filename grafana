@@ -1,0 +1,12 @@
+# Домашнее задание: Настройка мониторинга (Grafana + Prometheus + Alertmanager)
+
+## Цель работы
+Установить и настроить стек мониторинга на базе образов Grafana, Prometheus и Alertmanager, используя репозиторий `stefanprodan/dockprom`, проверить его работоспособность и изучить предварительные настройки.
+
+## Ход выполнения работы
+
+### 1. Клонирование репозитория и сборка
+Был склонирован репозиторий:
+```bash
+git clone https://github.com/stefanprodan/dockprom.git
+cd dockprom
